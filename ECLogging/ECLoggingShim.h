@@ -10,6 +10,8 @@
 #if EC_RELEASE
 
 #define ECDebug(chan, ...)
+#define ECDebugOnly(x)
+#define ECReleaseOnly(x) x
 
 #define ECChannelEnable(chan)
 #define ECChannelDisable(chan)
@@ -23,6 +25,9 @@
     NSString* msg = [NSString stringWithFormat:__VA_ARGS__]; \
     NSString* ch = [[NSString stringWithFormat:@"«%s»", #chan] stringByPaddingToLength:30 withString:@" " startingAtIndex:0]; \
     NSLog(@"%@%@", ch, msg); } while (false)
+
+#define ECDebugOnly(x) x
+#define ECReleaseOnly(x)
 
 #define ECChannelEnable(chan) *(ECGetChannel(chan)) = YES
 #define ECChannelDisable(chan) *(ECGetChannel(chan)) = NO
