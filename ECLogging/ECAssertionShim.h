@@ -10,6 +10,7 @@
 #define ECAssertNilBase(expression, imp)						imp((expression) == nil)
 #define ECAssertCountAtLeastBase(container, countMinimum, imp)	imp([container count] >= countMinimum)
 #define ECAssertEmptyBase(object, imp)
+#define ECCastTo(_class_,_expression_)                          ((_class_*) (_expression_))
 
 #if EC_DEBUG
 
