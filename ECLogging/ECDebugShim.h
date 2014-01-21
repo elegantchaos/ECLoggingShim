@@ -1,6 +1,6 @@
 //
 //  Created by Sam Deane on 30/08/2012.
-//  Copyright (c) 2012 Bohemian Coding. All rights reserved.
+//  Copyright (c) 2014 Sam Deane, Elegant Chaos. All rights reserved.
 //
 // Fake version of ECLogging debug stuff - potentially allows us to drop the real thing in at some point in the future
 
