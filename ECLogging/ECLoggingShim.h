@@ -36,7 +36,7 @@
 #define ECGetChannel(chan) getChannel##chan(#chan)
 #define ECDeclareDebugChannel(chan) extern BOOL* getChannel##chan(const char* name)
 #define ECDefineDebugChannel(chan) BOOL* getChannel##chan(const char* name) { static BOOL enabled = NO; return &enabled; }
-#define ECOptionEnabled(key) ([[NSUserDefaults standardUserDefaults] boolForKey:key])
+#define ECOptionEnabled(key) ([[NSUserDefaults standardUserDefaults] boolForKey: (@"" #key)])
 #define ECDebugOptionEnabled(key) ECOptionEnabled(key)
 
 #endif
